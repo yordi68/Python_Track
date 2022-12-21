@@ -1,0 +1,23 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def checker(side_length):
+    # intializing the left and right pointer
+    l = 0
+    r = len(side_length) - 1
+    curr_length = float("inf")
+    while l <= r:
+        if side_length[l] >= side_length[r] and side_length[l] <= curr_length:
+            curr_length = side_length[l]
+            l += 1
+        elif side_length[r] > side_length[l] and side_length[r] <= curr_length:
+            curr_length = side_length[r]
+            r -= 1
+        else:
+            return "No"
+    return "Yes"
+
+
+test_cases = int(input())
+for i in range(test_cases):
+    n = int(input())
+    side_length = list(map(int,input().split()))
+    print(checker(side_length))
