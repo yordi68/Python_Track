@@ -1,0 +1,8 @@
+set1_length = input()
+set1 = set(map(int,input().split()))
+set2_length = input()
+set2 = set(map(int,input().split()))
+
+unique_elements_length = len(set1.difference(set2))
+
+print(unique_elements_length)
