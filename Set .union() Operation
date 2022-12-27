@@ -1,0 +1,8 @@
+n = input()
+first_set = set(map(int,input().split()))
+b = input()
+second_set = set(map(int,input().split()))
+
+union_length = len(first_set.union(second_set))
+
+print(union_length)
