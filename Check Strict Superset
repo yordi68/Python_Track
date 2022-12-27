@@ -1,0 +1,9 @@
+setA = set(map(int,input().split()))
+number_of_sets = input()
+setB = set(map(int,input().split()))
+setC = set(map(int,input().split()))
+
+if setA.issuperset(setB) and setA.issuperset(setC):
+    print(True)
+else:
+    print(False)
