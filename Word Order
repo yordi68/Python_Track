@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(input())
+words = []
+dictionary = {}
+for i in range(n):
+    words.append(input())
+    
+for i in range(n):
+    if words[i] in dictionary:
+        dictionary[words[i]] += 1
+    else:
+        dictionary[words[i]] = 1
+        
+print(len(dictionary))
+for key in dictionary:
+    print(dictionary[key],end=" ")
